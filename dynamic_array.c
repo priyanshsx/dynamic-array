@@ -10,6 +10,8 @@ int main(){
     int size = 0;
     int capacity = 2;
 
+    // step 2: ask the os for a tiny block of memory using malloc 
+
     int *arr = malloc(sizeof(int) * capacity);
 
     // checking if we indeed did get the memory 
@@ -19,12 +21,40 @@ int main(){
     }
 
     printf("Successful in getting memory from the computer!");
+
+    // step 3: start an input loop where the user continuously types numbers 
+
+    int user_input;
+
+    // creating an infinite loop 
+    while (1){
+        printf("Enter numbers to resize array: ");
+        scanf("%d", &user_input);
+    
+    
+    if (user_input == -1){
+        break;
+    }
+    
+    // step 4: check if size can fit the user input 
+    
+    if (size == capacity){
+        printf("Array full. Size: %d, Capacity: %d. Let's resize.\n", size, capacity);
+
+        // step 5: realloc memory 
+        arr = realloc(arr, sizeof(int) * capacity);
+    }
+    arr[size] = user_input;
+    size++;
+
+    // step 6: cleanup 
+
+    }
+    
+    free(arr); 
+
+    return 0;
 }
-
-
-// step 2: ask the os for a tiny block of memory using malloc 
-
-
 
 // step 3: start an input loop where the user continuously types numbers 
 
@@ -38,4 +68,5 @@ int main(){
 
 
 
-// step 6: cleanup 
+
+
