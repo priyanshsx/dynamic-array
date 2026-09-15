@@ -1,6 +1,25 @@
+// importing libraries 
+
+#include<stdio.h>
+#include<stdlib.h>
+
 // step 1: create a pointer to hold the array with: 
 // an integer variable for capacity and one integer variable for size 
 
+int main(){
+    int size = 0;
+    int capacity = 2;
+
+    int *arr = malloc(capacity*sizeof(int));
+
+    // safety check for memory
+    if (arr == NULL){
+        printf("Fatal error: Memory allocation failed!\n");
+        return 1;
+    }
+
+    printf("Success! The os granted us memory for %d integers.\n", capacity);
+}
 
 
 // step 2: ask the os for a tiny block of memory using malloc 
