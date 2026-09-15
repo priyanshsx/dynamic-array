@@ -10,15 +10,15 @@ int main(){
     int size = 0;
     int capacity = 2;
 
-    int *arr = malloc(capacity*sizeof(int));
+    int *arr = malloc(sizeof(int) * capacity);
 
-    // safety check for memory
+    // checking if we indeed did get the memory 
     if (arr == NULL){
-        printf("Fatal error: Memory allocation failed!\n");
-        return 1;
+        printf("Fatal error. We did not get memory from he computer.\n");
+        return 1; // helps exit the program with an error status 
     }
 
-    printf("Success! The os granted us memory for %d integers.\n", capacity);
+    printf("Successful in getting memory from the computer!");
 }
 
 
