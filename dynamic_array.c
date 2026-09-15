@@ -16,11 +16,11 @@ int main(){
 
     // checking if we indeed did get the memory 
     if (arr == NULL){
-        printf("Fatal error. We did not get memory from the computer. Run the program again.\n");
+        printf("Fatal error. We did not get memory from the computer. Run the program again.");
         return 1; // helps exit the program with an error status 
     }
 
-    printf("Successful in getting memory from the computer!");
+    printf("Successful in getting memory from the computer!\n");
 
     // step 3: start an input loop where the user continuously types numbers 
 
@@ -28,7 +28,7 @@ int main(){
 
     // creating an infinite loop 
     while (1){
-        printf("Enter numbers to resize array. Enter -1 to exit.: ");
+        printf("\nEnter numbers to resize array. Enter -1 to exit.: ");
         scanf("%d", &user_input);
     
     if (user_input == -1){
